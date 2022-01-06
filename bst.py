@@ -138,8 +138,6 @@ def get_menu_choice():
         print(80 * "-")
 
     loop = True
-    int_choice = -1
-
     while loop:       
         print_menu()    
         choice = input("Enter your choice [1-5]: ")
@@ -147,7 +145,6 @@ def get_menu_choice():
         if choice == '1':
             add_int = input("Enter value to add:")
             bst.insert(add_int)
-            int_choice = 1
             loop = True
         elif choice == '2':
             remove_int = input("Enter value to delete: ")
@@ -156,19 +153,16 @@ def get_menu_choice():
         elif choice == '3':
             choice = ''
             display()
-            int_choice = 3
             loop = True
         elif choice == '4':
             base_set()
-            int_choice = 4
             loop = True
         elif choice == '5':
-            int_choice = -1
             print("Exiting..")
             loop = False  
         else:
             input("Wrong menu selection. Enter any key to try again..")
-    return [int_choice, choice]
+    return [choice]
 
 
 if __name__ == "__main__":
