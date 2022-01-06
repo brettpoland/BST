@@ -8,7 +8,7 @@ class BSTNode:
         """[Uses Binary Search Tree Algorithm to insert Data]
 
         Args:
-            val (int): [int Value for binary tree insertion]
+            val (int): [int Value for binary tree insertion 1]
         """        
         if not self.val:
             self.val = val
